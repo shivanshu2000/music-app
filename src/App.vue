@@ -2,18 +2,16 @@
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
       <!-- App Name -->
-      <a class="text-white font-bold uppercase text-2xl mr-4" href="#">Music</a>
+      <a class="text-white font-bold uppercase text-2xl mr-10" href="#"
+        >Music</a
+      >
 
       <div class="flex flex-grow items-center">
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-          <li>
-            <a class="px-2 text-white" href="#">Login / Register</a>
-          </li>
-          <li>
-            <a class="px-2 text-white" href="#">Manage</a>
-          </li>
+          <a class="px-2 text-white nav__link" href="#">Login / Register</a>
+          <a class="px-2 text-white nav__link" href="#">Manage</a>
         </ul>
       </div>
     </nav>
@@ -45,214 +43,179 @@
 
   <!-- Main Content -->
   <section class="container mx-auto">
-    <div class="bg-white rounded border border-gray-200 relative flex flex-col">
-      <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
-        <span class="card-title">Songs</span>
+    <div class="rounded relative flex flex-col main__block">
+      <div class="px-6 pt-6 pb-5 font-bold border-b ">
+        <span class="card-title text-white">Songs</span>
         <!-- Icon -->
         <i class="fa fa-headphones-alt float-right text-green-400 text-xl"></i>
       </div>
       <!-- Playlist -->
       <ol id="playlist">
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
         </li>
-        <li
-          class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
-          duration-300 hover:bg-gray-50"
-        >
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer">
           <div>
-            <a href="#" class="font-bold block text-gray-600">Song Title</a>
-            <span class="text-gray-500 text-sm">Artist Name</span>
+            <a href="#" class="font-bold text-white block">Song Title</a>
+            <span class="text-sm text-white">Artist Name</span>
           </div>
 
-          <div class="text-gray-600 text-lg">
+          <div class="text-white text-lg">
             <span class="comments">
-              <i class="fa fa-comments text-gray-600"></i>
+              <i class="fa fa-comments text-white"></i>
               15
             </span>
           </div>
@@ -270,7 +233,7 @@
       <!-- Play/Pause Button -->
       <div class="float-left w-7 h-7 leading-3">
         <button type="button">
-          <i class="fa fa-play text-gray-500 text-xl"></i>
+          <i class="fa fa-play text-purple-400 text-xl"></i>
         </button>
       </div>
       <!-- Current Position -->

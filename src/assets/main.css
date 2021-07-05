@@ -1,8 +1,35 @@
 a {
-  transition: all 0.15s ease;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  /* line-height: 11px; */
 }
 
-/* text-yellow-500 */
+.nav__link {
+  text-decoration: none;
+  margin-right: 25px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav__link:after {
+  content: '';
+  position: absolute;
+  margin-top: 5px;
+  left: 50%;
+  bottom: -15px;
+  width: 0%;
+  transition: all 0.3s ease;
+}
+
+.nav__link:hover:after {
+  border-bottom: 3px solid #f59e0b;
+  height: 3px;
+  left: 0;
+  width: 100%;
+  text-decoration: none;
+}
+
 a:hover {
   color: #f59e0b;
   text-decoration: none;
@@ -20,6 +47,10 @@ a:hover {
 
 .top-neg-8 {
   top: -8px;
+}
+
+#header {
+  padding: 0.5rem 1rem;
 }
 
 .player-song-info {
@@ -69,7 +100,7 @@ input[type='file'] {
 }
 
 .music-bg {
-  animation: slide 1s linear infinite;
+  animation: slide 0.1s linear infinite;
   will-change: background-position;
   background-image: url(/assets/theme/img/song-header.png);
 }
@@ -88,6 +119,29 @@ input[type='file'] {
     background-position: 0 0;
   }
   100% {
-    background-position: 4000px 0;
+    background-position: -4000px 0;
   }
+}
+
+body {
+  background: #4d4983;
+}
+
+.main__block {
+  margin: 5rem 0;
+  padding: 1.5rem 0;
+  border-radius: 15px;
+  background: #4d4983;
+  box-shadow: inset 5px 5px 4px #444073, inset -5px -5px 4px #565293;
+  overflow: hidden;
+}
+
+li {
+  margin: 9px 0;
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  background: linear-gradient(145deg, #454276, #524e8c);
+  box-shadow: 5px 5px 4px #444073, -5px -5px 4px #565293;
 }
