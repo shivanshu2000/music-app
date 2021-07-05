@@ -4,16 +4,29 @@
       <a class="text-white font-bold uppercase text-2xl mr-10" href="#"
         >Music</a
       >
+
       <div class="flex flex-grow items-center">
         <ul class="flex flex-row mt-1">
-          <li>
-            <a class="px-2 text-white nav__link" href="#">Login / Register</a>
-          </li>
-          <li>
-            <a class="px-2 text-white nav__link" href="#">Manage</a>
-          </li>
+          <a
+            class="px-2 text-white nav__link"
+            href="#"
+            @click.prevent="toggleAuthModal"
+            >Login / Register</a
+          >
+          <a class="px-2 text-white nav__link" href="#">Manage</a>
         </ul>
       </div>
     </nav>
   </header>
 </template>
+
+<script>
+import { mapMutations } from 'vuex';
+
+export default {
+  name: 'Header',
+  methods: {
+    ...mapMutations(['toggleAuthModal']),
+  },
+};
+</script>
