@@ -35,7 +35,9 @@
       </div>
       <!-- Playlist -->
       <ol id="playlist">
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -48,7 +50,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -61,7 +65,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -74,7 +80,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -87,7 +95,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -100,7 +110,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -113,7 +125,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -126,7 +140,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -139,7 +155,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -152,7 +170,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -165,7 +185,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -178,7 +200,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -191,7 +215,9 @@
             </span>
           </div>
         </li>
-        <li class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer">
+        <li
+          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
+        >
           <div>
             <a href="#" class="font-bold text-white block">Song Title</a>
             <span class="text-sm text-white">Artist Name</span>
@@ -273,6 +299,10 @@ export default {
   components: {
     AppHeader,
     AuthModal,
+  },
+
+  created() {
+    this.$store.dispatch('init_login');
   },
 };
 </script>

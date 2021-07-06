@@ -58,15 +58,26 @@ export default {
   },
 
   methods: {
-    login(values) {
+    async login(values) {
       console.log(values);
       this.logging = true;
       this.showAlert = true;
       this.loginAlertVariant = 'bg-blue-500';
       this.loginAlertMessage = 'Please wait!';
 
+      try {
+        await this.$store.dispatch('login', values);
+      } catch (error) {
+        this.logging = false;
+        this.showAlert = true;
+        this.loginAlertVariant = 'bg-red-500';
+        this.loginAlertMessage = 'Invalid login details';
+        return;
+      }
+
       this.loginAlertVariant = 'bg-green-500';
       this.loginAlertMessage = 'You are logged in successfully';
+      window.location.reload();
     },
   },
 };

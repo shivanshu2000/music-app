@@ -123,7 +123,7 @@ export default {
         name: 'required|min:3|max:100|alpha_spaces',
         email: 'required|min:3|max:100|email',
         age: 'required|min_value:18|max_value:100',
-        password: 'required|min:3|max:100',
+        password: 'required|min:6|max:100',
         confirm_password: 'passwords_mismatch:@password',
         country: 'required|country_excluded:Lanka',
         tos: 'tos',
@@ -139,15 +139,28 @@ export default {
     };
   },
   methods: {
-    register(values) {
+    async register(values) {
       this.showAlert = true;
       this.registering = true;
       this.regAlertVariant = 'bg-blue-500';
       this.regAlertMessage = 'Please wait! Your account is being created';
 
+      try {
+        await this.$store.dispatch('register', values);
+      } catch (error) {
+        this.registering = false;
+        this.regAlertVariant = 'bg-red-500';
+        // eslint-disable-next-line operator-linebreak
+        this.regAlertMessage =
+          error.code === 'auth/email-already-in-use'
+            ? 'Email already in use. Please use a diferent email'
+            : 'An error occured. Please try again later.';
+        return;
+      }
+
       this.regAlertVariant = 'bg-green-500';
       this.regAlertMessage = 'Your account has been created successfully';
-      console.log(values);
+      window.location.reload();
     },
   },
 };
