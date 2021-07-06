@@ -2,16 +2,16 @@
 
 # Overview
 
--- We've three mapping functions mapState, mapGetters, mapMutations,
+- We've three mapping functions mapState, mapGetters, mapMutations,
 
--- we'll use mapMutations(['mutationName']) in methods object in a component
+- we'll use mapMutations(['mutationName']) in methods object in a component
 
--- we'll use mapGetters(['getterName'])
+- we'll use mapGetters(['getterName'])
 and mapState(['stateName']) in computed object in a component
 
--- it's not always necessary to use getters. We can use getters if along with getting a state value we also need to do some calculation. If we only need a value we can only use mapState function too
+- it's not always necessary to use getters. We can use getters if along with getting a state value we also need to do some calculation. If we only need a value we can only use mapState function too
 
--- we can also create aliases for the names either it is mutation or getters or state name in that case instead of passing an array to for example mapState(['']) we'll pass an object as mapState({
+- we can also create aliases for the names either it is mutation or getters or state name in that case instead of passing an array to for example mapState(['']) we'll pass an object as mapState({
 alias: 'stateName'
 })
 
