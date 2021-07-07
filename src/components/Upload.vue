@@ -21,6 +21,7 @@
       >
         <h5>Drop your files here</h5>
       </div>
+      <input type="file" multiple @change="upload($event)" />
       <hr class="my-6" />
       <!-- Progess Bars -->
       <div class="mb-4" v-for="upload in uploads" :key="upload.name">
@@ -55,7 +56,11 @@ export default {
 
   methods: {
     upload($event) {
-      const files = [...$event.dataTransfer.files];
+      this.is_dragover = false;
+
+      const files = $event.dataTransfer
+        ? [...$event.dataTransfer.files]
+        : [...$event.target.files];
 
       files.forEach((file) => {
         if (file.type !== 'audio/mpeg') {
@@ -113,6 +118,19 @@ export default {
       });
       this.is_dragover = false;
     },
+
+    // If we wanted to call it by a ref in Manage component
+    // cancelUploads() {
+    //   this.uploads.forEach((upload) => {
+    //     upload.task.cancel();
+    //   });
+    // },
+  },
+
+  beforeUnmount() {
+    this.uploads.forEach((upload) => {
+      upload.task.cancel();
+    });
   },
 };
 </script>
