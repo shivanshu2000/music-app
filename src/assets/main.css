@@ -1,6 +1,6 @@
 a {
   text-decoration: none;
-
+  border-bottom: 0px solid #f59e0b;
   transition: all 0.3s ease;
   /* line-height: 11px; */
 }
@@ -8,8 +8,11 @@ a {
 .nav__link {
   text-decoration: none;
   margin-right: 25px;
+  border-bottom: 0px solid #f59e0b;
+
   position: relative;
-  transition: all 0.3s ease;
+  padding-bottom: 6px;
+  transition: hover 0.3s ease;
 }
 
 .nav__link:after {
@@ -17,8 +20,9 @@ a {
   position: absolute;
   margin-top: 5px;
   left: 50%;
-  bottom: -15px;
+  bottom: -4px;
   width: 0%;
+  border-bottom: 3px solid #f59e0b;
   transition: all 0.3s ease;
 }
 
@@ -30,9 +34,37 @@ a {
   text-decoration: none;
 }
 
+.active {
+  border-bottom: 3px solid #f59e0b;
+  color: #f59e0b;
+}
+
+.active:after {
+  content: '';
+  border-bottom: 3px solid transparent;
+  position: absolute;
+  margin-top: 5px;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  transition: all 0.01s ease;
+}
+
+.active:hover:after {
+  border-bottom: 0px solid #374151;
+  height: 0px;
+  left: 0;
+  width: 100%;
+  text-decoration: none;
+}
+
 a:hover {
   color: #f59e0b;
   text-decoration: none;
+}
+
+.logo.active {
+  border-bottom: 0px solid #374151;
 }
 
 .text-orange {
@@ -148,4 +180,17 @@ body {
   transform: translate3d(5px, -2px, 0);
   border-left: 3px solid #ff5e3a;
   /* transform: translateY(-5px); */
+}
+
+.blocks {
+  border-radius: 15px;
+  background: #4d4983;
+  box-shadow: inset 5px 5px 4px #444073, inset -5px -5px 4px #565293;
+  overflow: hidden;
+}
+
+.inner__blocks {
+  border-radius: 25px;
+  background: linear-gradient(45deg, #454276, #524e8c);
+  box-shadow: 5px -5px 10px #423f71, -5px 5px 10px #585395;
 }

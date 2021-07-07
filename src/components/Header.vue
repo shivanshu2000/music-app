@@ -1,8 +1,10 @@
 <template>
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
-      <a class="text-white font-bold uppercase text-2xl mr-10" href="#"
-        >Music</a
+      <router-link
+        class="logo text-white font-bold uppercase text-2xl mr-10"
+        :to="{ name: 'home' }"
+        >Music</router-link
       >
 
       <div class="flex flex-grow items-center">
@@ -17,7 +19,18 @@
           </li>
           <template v-else>
             <li>
-              <a class="px-2 text-white nav__link" href="#">Manage</a>
+              <router-link
+                class="px-2 text-white nav__link"
+                :to="{ name: 'about' }"
+                >About</router-link
+              >
+            </li>
+            <li>
+              <router-link
+                class="px-2 text-white nav__link"
+                :to="{ name: 'manage' }"
+                >Manage</router-link
+              >
             </li>
             <li>
               <a
@@ -35,13 +48,18 @@
 </template>
 
 <script>
-import { mapMutations, mapState, mapActions } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'Header',
   methods: {
     ...mapMutations(['toggleAuthModal']),
-    ...mapActions(['signout']),
+    signout() {
+      this.$store.dispatch('signout');
+      if (this.$route.meta.requiresAuth) {
+        this.$router.push({ name: 'home' });
+      }
+    },
   },
 
   computed: {
