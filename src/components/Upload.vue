@@ -24,18 +24,20 @@
       <input type="file" multiple @change="upload($event)" />
       <hr class="my-6" />
       <!-- Progess Bars -->
-      <div class="mb-4" v-for="upload in uploads" :key="upload.name">
-        <!-- File Name -->
-        <div class="font-bold text-sm" :class="upload.text_class">
-          <i :class="upload.icon"></i> {{ upload.name }}
-        </div>
-        <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
-          <!-- Inner Progress Bar -->
-          <div
-            class="transition-all progress-bar bg-blue-400"
-            :style="{ width: upload.current_progress + '%' }"
-            :class="upload.variant"
-          ></div>
+      <div class="progress__container">
+        <div class="mb-4" v-for="upload in uploads" :key="upload.name">
+          <!-- File Name -->
+          <div class="font-bold text-sm" :class="upload.text_class">
+            <i :class="upload.icon"></i> {{ upload.name }}
+          </div>
+          <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
+            <!-- Inner Progress Bar -->
+            <div
+              class="transition-all progress-bar"
+              :style="{ width: upload.current_progress + '%' }"
+              :class="upload.variant"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -106,8 +108,10 @@ export default {
             };
 
             song.url = await task.snapshot.ref.getDownloadURL();
-            await songsCollection.add(song);
-
+            const songRef = await songsCollection.add(song);
+            // we're here converting songRef to a snapshot so that we can use snapshot oriented features
+            const songSnapshot = await songRef.get();
+            this.addSong(songSnapshot);
             this.uploads[uploadIndex].variant = 'bg-green-400';
             this.uploads[uploadIndex].icon = 'fas fa-check';
             this.uploads[uploadIndex].text_class = 'text-green-400';
@@ -126,6 +130,7 @@ export default {
     //   });
     // },
   },
+  props: ['addSong'],
 
   beforeUnmount() {
     this.uploads.forEach((upload) => {
