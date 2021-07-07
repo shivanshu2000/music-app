@@ -43,9 +43,12 @@ export default createStore({
       commit('toggleAuthentication');
     },
 
-    async signout({ commit }) {
+    async signout({ commit }, payload) {
       await auth.signOut();
       commit('toggleAuthentication');
+      if (payload.route.meta.requiresAuth) {
+        payload.router.push({ name: 'home' });
+      }
     },
 
     init_login({ commit }) {

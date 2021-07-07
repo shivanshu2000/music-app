@@ -55,10 +55,13 @@ export default {
   methods: {
     ...mapMutations(['toggleAuthModal']),
     signout() {
-      this.$store.dispatch('signout');
-      if (this.$route.meta.requiresAuth) {
-        this.$router.push({ name: 'home' });
-      }
+      this.$store.dispatch('signout', {
+        router: this.$router,
+        route: this.$route,
+      });
+      // if (this.$route.meta.requiresAuth) {
+      //   this.$router.push({ name: 'home' });
+      // }
     },
   },
 
