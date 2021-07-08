@@ -12,7 +12,7 @@
           <li v-if="!userLoggedIn">
             <a
               class="px-2 text-white nav__link"
-              href="#"
+              style="cursor:pointer"
               @click.prevent="toggleAuthModal"
               >Login / Register</a
             >
@@ -21,6 +21,7 @@
             <li>
               <router-link
                 class="px-2 text-white nav__link"
+                style="cursor:pointer"
                 :to="{ name: 'manage' }"
                 >Manage</router-link
               >
