@@ -1,5 +1,4 @@
 <template>
-  <!-- Composition Items -->
   <div class=" blocks p-7 mb-7">
     <div v-show="!showForm">
       <h4 class="inline-block text-2xl font-bold">{{ song.modified_name }}</h4>
@@ -95,7 +94,6 @@ export default {
   },
   methods: {
     async edit(values) {
-      console.log(values);
       this.in_submission = true;
       this.show_alert = true;
       this.alert_variant = 'bg-blue-500';

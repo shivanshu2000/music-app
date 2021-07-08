@@ -21,22 +21,12 @@
             <li>
               <router-link
                 class="px-2 text-white nav__link"
-                :to="{ name: 'about' }"
-                >About</router-link
-              >
-            </li>
-            <li>
-              <router-link
-                class="px-2 text-white nav__link"
                 :to="{ name: 'manage' }"
                 >Manage</router-link
               >
             </li>
             <li>
-              <a
-                class="px-2 text-white nav__link"
-                href="#"
-                @click.prevent="signout"
+              <a class="px-2 text-white nav__link" @click.prevent="signout"
                 >Logout</a
               >
             </li>

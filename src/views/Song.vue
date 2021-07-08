@@ -21,7 +21,7 @@
       </div>
     </div>
   </section>
-  <!-- Form -->
+
   <section id="comments" class="container mx-auto mt-6 ">
     <div class="bg-white mb-6 relative flex flex-col blocks">
       <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
@@ -70,7 +70,7 @@
       </div>
     </div>
   </section>
-  <!-- Comments -->
+
   <ul class="container mx-auto ">
     <li
       v-for="comment in sortedComments"

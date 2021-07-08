@@ -24,7 +24,6 @@
     />
   </section>
 
-  <!-- Main Content -->
   <section class="container mx-auto">
     <div class="rounded relative flex flex-col main__block">
       <div class="px-6 pt-6 pb-5 font-bold border-b ">
@@ -77,7 +76,6 @@ export default {
       const bottomOfWindow =
         Math.round(scrollTop) + innerHeight - offsetHeight <= 80;
       if (bottomOfWindow) {
-        console.log(bottomOfWindow);
         this.getSongs();
       }
     },
@@ -86,9 +84,6 @@ export default {
       if (this.pendingRequest || this.stopRequests) {
         return;
       }
-
-      console.log(this.stopRequests);
-
       this.pendingRequest = true;
 
       let snapshots;
