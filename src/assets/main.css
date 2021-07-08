@@ -223,3 +223,12 @@ body {
   background: #423f71;
   border-radius: 10px;
 }
+
+.bottom__bar {
+  background: linear-gradient(145deg, #454276, #524e8c);
+  box-shadow: 5px 5px 10px #434072, -5px -5px 10px #575294;
+}
+
+.home__list {
+  height: 70vh;
+}

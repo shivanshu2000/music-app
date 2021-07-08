@@ -13,6 +13,9 @@
             ></i>
           </div>
           <div class="p-6 songs__list">
+            <div v-if="showSpinner" class="mt-9" style=" text-align:center">
+              <i class="fas fa-spinner fa-spin text-white" />
+            </div>
             <CompositionItem
               v-for="(song, i) in songs"
               :updateSong="updateSong"
@@ -49,6 +52,7 @@ export default {
     return {
       songs: [],
       unsavedFlag: false,
+      showSpinner: false,
     };
   },
   components: {
@@ -81,6 +85,7 @@ export default {
   },
 
   async created() {
+    this.showSpinner = true;
     const snapshot = await songsCollection
       .where('uid', '==', auth.currentUser.uid)
       .get();
@@ -89,6 +94,7 @@ export default {
     // snapshot.forEeach(document=>{
     //   this.addSong(document)
     // })
+    this.showSpinner = false;
   },
 
   beforeRouteLeave(to, from, next) {

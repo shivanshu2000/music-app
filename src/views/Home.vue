@@ -1,5 +1,6 @@
 <template>
   <!-- Introduction -->
+
   <section class="mb-8 py-20 text-white text-center relative">
     <div
       class="absolute inset-0 w-full h-full bg-contain introduction-bg"
@@ -28,14 +29,16 @@
     <div class="rounded relative flex flex-col main__block">
       <div class="px-6 pt-6 pb-5 font-bold border-b ">
         <span class="card-title text-white">Songs</span>
-        <!-- Icon -->
+
         <i class="fa fa-headphones-alt float-right text-green-400 text-xl"></i>
       </div>
-      <!-- Playlist -->
+
       <ol id="playlist">
         <AppSongItem :song="song" v-for="song in songs" :key="song.docId" />
+        <div v-if="showSpinner" style="text-align:center">
+          <i class="fas fa-spinner fa-spin text-white" />
+        </div>
       </ol>
-      <!-- .. end Playlist -->
     </div>
   </section>
 </template>
@@ -52,6 +55,7 @@ export default {
       maxPerPage: 3,
       pendingRequest: false,
       stopRequests: false,
+      showSpinner: false,
     };
   },
   components: {
@@ -71,8 +75,9 @@ export default {
       const { innerHeight } = window;
       // eslint-disable-next-line operator-linebreak
       const bottomOfWindow =
-        Math.round(scrollTop) + innerHeight === offsetHeight;
+        Math.round(scrollTop) + innerHeight - offsetHeight <= 80;
       if (bottomOfWindow) {
+        console.log(bottomOfWindow);
         this.getSongs();
       }
     },
@@ -88,6 +93,7 @@ export default {
 
       let snapshots;
       if (this.songs.length) {
+        this.showSpinner = true;
         const lastDoc = await songsCollection
           .doc(
             // eslint-disable-next-line comma-dangle
@@ -102,8 +108,8 @@ export default {
 
         if (snapshots.size === 0) {
           this.stopRequests = true;
+          this.showSpinner = false;
         }
-        console.log(snapshots.size);
       } else {
         snapshots = await songsCollection
           .orderBy('modified_name')

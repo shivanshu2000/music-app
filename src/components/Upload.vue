@@ -5,7 +5,6 @@
       <i class="fas fa-upload float-right text-green-400 text-2xl"></i>
     </div>
     <div class="p-6">
-      <!-- Upload Dropbox -->
       <div
         class="w-full px-10 py-20 rounded text-center cursor-pointer border border-dashed
                 border-gray-400 text-gray-400 transition duration-500 hover:text-white
@@ -23,15 +22,12 @@
       </div>
       <input type="file" multiple @change="upload($event)" />
       <hr class="my-6" />
-      <!-- Progess Bars -->
       <div class="progress__container">
         <div class="mb-4" v-for="upload in uploads" :key="upload.name">
-          <!-- File Name -->
           <div class="font-bold text-sm" :class="upload.text_class">
             <i :class="upload.icon"></i> {{ upload.name }}
           </div>
           <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
-            <!-- Inner Progress Bar -->
             <div
               class="transition-all progress-bar"
               :style="{ width: upload.current_progress + '%' }"
