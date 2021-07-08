@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { storage, auth, songsCollection } from '../includes/fireabase';
+import { storage, auth, songsCollection } from '../includes/firebase';
 
 export default {
   name: 'Upload',
@@ -118,13 +118,6 @@ export default {
       });
       this.is_dragover = false;
     },
-
-    // If we wanted to call it by a ref in Manage component
-    // cancelUploads() {
-    //   this.uploads.forEach((upload) => {
-    //     upload.task.cancel();
-    //   });
-    // },
   },
   props: ['addSong'],
 

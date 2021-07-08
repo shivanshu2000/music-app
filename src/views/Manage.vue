@@ -36,7 +36,7 @@
 // import store from '@/store';
 import AppUpload from '@/components/Upload.vue';
 import CompositionItem from '@/components/CompositionItem.vue';
-import { auth, songsCollection } from '../includes/fireabase';
+import { auth, songsCollection } from '../includes/firebase';
 
 export default {
   name: 'Manage',

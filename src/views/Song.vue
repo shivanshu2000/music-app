@@ -96,7 +96,7 @@ import {
   songsCollection,
   auth,
   commentsCollection,
-} from '../includes/fireabase';
+} from '../includes/firebase';
 
 export default {
   name: 'Song',

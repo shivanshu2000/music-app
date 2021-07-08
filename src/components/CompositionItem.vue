@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import { songsCollection, storage } from '../includes/fireabase';
+import { songsCollection, storage } from '../includes/firebase';
 
 export default {
   name: 'CompositionItem',

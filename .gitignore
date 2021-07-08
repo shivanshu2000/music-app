@@ -17,6 +17,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+.env
+.env.production
 # Editor directories and files
 .idea
 .vscode
@@ -25,5 +27,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
 
 .vercel

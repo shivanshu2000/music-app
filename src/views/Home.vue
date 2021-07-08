@@ -44,7 +44,7 @@
 
 <script>
 import AppSongItem from '@/components/SongItem.vue';
-import { songsCollection } from '../includes/fireabase';
+import { songsCollection } from '../includes/firebase';
 
 export default {
   name: 'Home',
