@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-10 inset-0 overflow-y-auto"
+    class="modal inset-0 overflow-y-auto"
     :class="{ hidden: !authModalShow }"
     id="modal"
   >
@@ -9,7 +9,7 @@
     sm:block sm:p-0"
     >
       <div class="fixed inset-0 transition-opacity">
-        <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
+        <div class="fixed inset-0 bg-gray-800 opacity-75"></div>
       </div>
 
       <span class="hidden sm:inline-block sm:align-middle sm:h-screen"
@@ -17,7 +17,7 @@
       >
 
       <div
-        class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden
+        class="blocks py-9 inline-block align-bottom form__bg rounded-lg text-left overflow-hidden
         shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
       >
         <div class="py-4 text-left px-6">

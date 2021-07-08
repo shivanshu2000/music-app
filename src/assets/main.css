@@ -241,3 +241,15 @@ body {
   align-items: center;
   overflow: hidden;
 }
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  color: white;
+}
+
+.form__bg {
+  border-radius: 10px;
+  background: linear-gradient(145deg, #423f71, #423f71);
+  /* box-shadow: 5px 5px 0px #78758c, -5px -5px 0px #84819a; */
+}

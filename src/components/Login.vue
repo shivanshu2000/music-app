@@ -1,19 +1,19 @@
 <template>
   <div
-    class="text-white text-center font-bold p-4 mb-h"
+    class="text-white text-center font-bold p-4 mb-h z-999"
     :class="loginAlertVariant"
     v-if="showAlert"
   >
     {{ loginAlertMessage }}
   </div>
-  <VeeForm @submit="login" :validation-schema="loginSchema">
+  <VeeForm autocomplete="off" @submit="login" :validation-schema="loginSchema">
     <div class="mb-3">
       <label class="inline-block mb-2">Email</label>
       <VeeField
         name="email"
         type="email"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+        class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Enter Email"
       />
       <ErrorMessage class="text-red-600" name="email" />
@@ -23,8 +23,8 @@
       <VeeField
         name="password"
         type="password"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+        class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Password"
       />
       <ErrorMessage class="text-red-600" name="password" />

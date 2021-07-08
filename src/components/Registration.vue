@@ -8,6 +8,7 @@
   </div>
 
   <VeeForm
+    autocomplete="off"
     :validation-schema="schema"
     :initial-values="userData"
     @submit="register"
@@ -17,8 +18,8 @@
       <VeeField
         name="name"
         type="text"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+        class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Enter Name"
       />
       <ErrorMessage class="text-red-600" name="name" />
@@ -29,8 +30,8 @@
       <VeeField
         name="email"
         type="email"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+        class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Enter Email"
       />
       <ErrorMessage name="email" class="text-red-600" />
@@ -41,8 +42,9 @@
       <VeeField
         name="age"
         type="number"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+        placeholder="Select an age"
+        class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
       />
 
       <ErrorMessage class="text-red-600" name="age" />
@@ -53,8 +55,8 @@
       <VeeField v-slot="{ field, errors }" name="password" :bails="false">
         <input
           type="password"
-          class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+          class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
           placeholder="Password"
           v-bind="field"
         />
@@ -69,8 +71,8 @@
       <VeeField
         name="confirm_password"
         type="password"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+        class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
         placeholder="Confirm Password"
       />
       <ErrorMessage class="text-red-600" name="confirm_password" />
@@ -81,8 +83,8 @@
       <VeeField
         name="country"
         as="select"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                  duration-500 focus:outline-none focus:border-black rounded"
+        class="block blocks text-white w-full py-2 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
       >
         <option value="India">India</option>
         <option value="India">Bangladesh (ye rehne de bhai)</option>

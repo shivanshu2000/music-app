@@ -34,8 +34,8 @@
           <VeeField
             name="modified_name"
             type="text"
-            class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300
-                        transition duration-500 focus:outline-none focus:border-black rounded"
+            class="block blocks w-full py-1.5 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
             placeholder="Enter Song Title"
             @input="updateUnsavedFlag(true)"
           />
@@ -47,8 +47,8 @@
           <VeeField
             name="genre"
             type="text"
-            class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300
-                        transition duration-500 focus:outline-none focus:border-black rounded"
+            class="block blocks text-white w-full py-1.5 px-3
+                                    transition duration-500 focus:outline-none focus:border-black rounded"
             placeholder="Enter Genre"
             @input="updateUnsavedFlag(true)"
           />
