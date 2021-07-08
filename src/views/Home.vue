@@ -33,203 +33,93 @@
       </div>
       <!-- Playlist -->
       <ol id="playlist">
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
-        <li
-          class="flex item__song justify-between items-center p-3 pl-6 cursor-pointer"
-        >
-          <div>
-            <a href="#" class="font-bold text-white block">Song Title</a>
-            <span class="text-sm text-white">Artist Name</span>
-          </div>
-
-          <div class="text-white text-lg">
-            <span class="comments">
-              <i class="fa fa-comments text-white"></i>
-              15
-            </span>
-          </div>
-        </li>
+        <AppSongItem :song="song" v-for="song in songs" :key="song.docId" />
       </ol>
       <!-- .. end Playlist -->
     </div>
   </section>
 </template>
+
+<script>
+import AppSongItem from '@/components/SongItem.vue';
+import { songsCollection } from '../includes/fireabase';
+
+export default {
+  name: 'Home',
+  data() {
+    return {
+      songs: [],
+      maxPerPage: 3,
+      pendingRequest: false,
+      stopRequests: false,
+    };
+  },
+  components: {
+    AppSongItem,
+  },
+  async created() {
+    this.getSongs();
+
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleSCroll);
+  },
+  methods: {
+    handleScroll() {
+      const { scrollTop, offsetHeight } = document.documentElement;
+      const { innerHeight } = window;
+      // eslint-disable-next-line operator-linebreak
+      const bottomOfWindow =
+        Math.round(scrollTop) + innerHeight === offsetHeight;
+      if (bottomOfWindow) {
+        this.getSongs();
+      }
+    },
+
+    async getSongs() {
+      if (this.pendingRequest || this.stopRequests) {
+        return;
+      }
+
+      console.log(this.stopRequests);
+
+      this.pendingRequest = true;
+
+      let snapshots;
+      if (this.songs.length) {
+        const lastDoc = await songsCollection
+          .doc(
+            // eslint-disable-next-line comma-dangle
+            this.songs[this.songs.length - 1].docId
+          )
+          .get();
+        snapshots = await songsCollection
+          .orderBy('modified_name')
+          .startAfter(lastDoc)
+          .limit(this.maxPerPage)
+          .get();
+
+        if (snapshots.size === 0) {
+          this.stopRequests = true;
+        }
+        console.log(snapshots.size);
+      } else {
+        snapshots = await songsCollection
+          .orderBy('modified_name')
+          .limit(this.maxPerPage)
+          .get();
+      }
+
+      snapshots.forEach((document) => {
+        this.songs.push({
+          ...document.data(),
+          docId: document.id,
+        });
+      });
+
+      this.pendingRequest = false;
+    },
+  },
+};
+</script>
