@@ -64,7 +64,7 @@ export default createStore({
         email: payload.email,
         name: payload.name,
         age: payload.age,
-        country: payload.country,
+        country: 'India',
       });
 
       await user.user.updateProfile({
