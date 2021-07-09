@@ -20,11 +20,11 @@
 
       <div class="float-left w-7 h-7 leading-3 ml-7 mt-2 player-scrub">
         <div
-          class="absolute left-0 right-0 text-lg text-white text-center mx-auto player-song-info"
+          class="absolute left-0 text-center right-0 text-lg text-white text-center mx-auto player-song-info"
           v-if="currentSong.modified_name"
         >
-          <span class="song-title">{{ currentSong.modified_name }}</span>
-          <span class="song-artist">
+          <span class="show song-title">{{ currentSong.modified_name }}</span>
+          <span class="show uploader__show song-artist">
             (Uploaded by {{ currentSong.displayName }})</span
           >
         </div>
@@ -34,14 +34,14 @@
           @click.prevent="updateSeek"
         >
           <span
-            class="absolute  text-gray-800 text-lg"
+            class="show absolute text-gray-800 text-lg"
             style="top: -10px"
             :style="{ left: playerProgress }"
           >
             <i class="fas fa-circle"></i>
           </span>
           <span
-            class="block h-2 rounded bg-gradient-to-r from-green-500    to-green-400"
+            class="block h-2 rounded bg-gradient-to-r from-green-500 to-green-400"
             :style="{ width: playerProgress }"
           ></span>
         </span>
@@ -61,6 +61,11 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 
 export default {
   name: 'Player',
+  data() {
+    return {
+      show: window.innerWidth > 500,
+    };
+  },
   methods: {
     ...mapActions(['toggleAudio', 'updateSeek']),
   },
