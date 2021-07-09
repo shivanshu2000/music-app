@@ -205,6 +205,7 @@ body {
 }
 
 .songs__list::-webkit-scrollbar,
+.list::-webkit-scrollbar,
 .progress__container::-webkit-scrollbar {
   height: 6px;
   width: 2px;
@@ -212,6 +213,7 @@ body {
 
 /* Track */
 .songs__list::-webkit-scrollbar-track,
+.list::-webkit-scrollbar-track,
 .progress__container::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
@@ -219,6 +221,7 @@ body {
 
 /* Handle */
 .songs__list::-webkit-scrollbar-thumb,
+.list::-webkit-scrollbar-thumb,
 .progress__container::-webkit-scrollbar-thumb {
   background: #423f71;
   border-radius: 10px;
@@ -263,4 +266,10 @@ body {
   .uploader__show {
     display: none;
   }
+}
+
+.list {
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

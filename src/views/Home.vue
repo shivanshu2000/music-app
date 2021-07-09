@@ -29,7 +29,7 @@
         <i class="fa fa-headphones-alt float-right text-green-400 text-xl"></i>
       </div>
 
-      <ol id="playlist">
+      <ol id="playlist" class="list">
         <AppSongItem :song="song" v-for="song in songs" :key="song.docId" />
         <div v-if="showSpinner" style="text-align:center">
           <i class="fas fa-spinner fa-spin text-white" />
@@ -48,7 +48,7 @@ export default {
   data() {
     return {
       songs: [],
-      maxPerPage: 3,
+      maxPerPage: 10,
       pendingRequest: false,
       stopRequests: false,
       showSpinner: false,
@@ -85,18 +85,19 @@ export default {
 
       let snapshots;
       if (this.songs.length) {
-        this.showSpinner = true;
         const lastDoc = await songsCollection
           .doc(
             // eslint-disable-next-line comma-dangle
             this.songs[this.songs.length - 1].docId
           )
           .get();
+        this.showSpinner = true;
         snapshots = await songsCollection
           .orderBy('modified_name')
           .startAfter(lastDoc)
           .limit(this.maxPerPage)
           .get();
+        this.showSpinner = false;
 
         if (snapshots.size === 0) {
           this.stopRequests = true;

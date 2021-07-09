@@ -27,7 +27,10 @@
               >
             </li>
             <li>
-              <a class="px-2 text-white nav__link" @click.prevent="signout"
+              <a
+                class="px-2 text-white nav__link"
+                style="cursor:pointer"
+                @click.prevent="signout"
                 >Logout</a
               >
             </li>
