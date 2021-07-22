@@ -1,11 +1,7 @@
 <template>
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
-      <router-link
-        class="logo text-white font-bold uppercase text-2xl mr-10"
-        :to="{ name: 'home' }"
-        >Music</router-link
-      >
+      <router-link class="logo" :to="{ name: 'home' }">Tuneshed</router-link>
 
       <div class="flex flex-grow items-center">
         <ul class="flex flex-row mt-1">
